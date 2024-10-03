@@ -10,6 +10,7 @@ import VueCountdown from '@chenfengyuan/vue-countdown'
 const app = createApp(App)
 
 app.use(createPinia())
+// @ts-ignore
 app.component(VueCountdown.name, VueCountdown)
 app.use(router)
 
