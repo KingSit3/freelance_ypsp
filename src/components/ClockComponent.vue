@@ -16,33 +16,13 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 
-const secDeg = ref(0)
-// const minDeg = ref(0)
-// const hourDeg = ref(0)
-
-const zeroPadded = (num: any) => {
-  if (num < 10) {
-    return `0${num}`
-  }
-  return num
-}
-
-const clock = () => {
-  let now = new Date()
-  // let hour = zeroPadded(now.getHours())
-  // let min = zeroPadded(now.getMinutes())
-  let sec = zeroPadded(now.getSeconds())
-  secDeg.value = (sec / 60) * 360 + 90
-  // minDeg.value = (min / 60) * 360 + (sec / 60) * 6 + 90
-  // hourDeg.value = (hour / 12) * 360 + (min / 60) * 30 + 90
-}
-const updateClock = () => {
-  setInterval(() => clock(), 1000)
-}
-
-onMounted(() => {
-  updateClock()
+const props = defineProps({
+  time: Object
 })
+
+const secDeg = ref((props.time?.date.getSeconds() / 60) * 360 + 90)
+// const minDeg = ref((props.time?.date.getSeconds() / 60) * 360 + (sec / 60) * 6 + 90)
+// const hourDeg = ref((props.time?.date.getSeconds() / 12) * 360 + (min / 60) * 30 + 90)
 </script>
 
 <style>

@@ -7,7 +7,7 @@
       <div class="relative">
         <img src="/logo.webp" alt="Logo" class="w-40" />
         <div class="rotate-180">
-          <ClockComponent />
+          <ClockComponent :time="time?.date" />
         </div>
         <img src="/blood.svg" alt="Blood" class="w-40 absolute bottom-6 left-7 opacity-95" />
       </div>
@@ -65,6 +65,7 @@ import ClockComponent from '@/components/ClockComponent.vue'
 import { ref, onMounted } from 'vue'
 
 interface TimeInterface {
+  date: Date
   seconds: string
   minutes: string
   hours: string
@@ -82,6 +83,7 @@ const getDistantDate = () => {
   let diff = now.getTime() - firstInvasion.getTime()
 
   return {
+    date: now,
     seconds: Math.round(diff / 1000).toString(),
     minutes: Math.round(diff / (1000 * 60)).toString(),
     hours: Math.round(diff / (1000 * 3600)).toString(),
