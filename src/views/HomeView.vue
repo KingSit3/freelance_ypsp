@@ -1,6 +1,14 @@
 <template>
-  <main class="min-h-screen w-full flex justify-center items-center relative p-20">
+  <main
+    class="min-h-screen w-full flex justify-center items-center relative p-20"
+    style="
+      background-image: url('/background.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
     <div class="absolute top-0 w-full h-full bg-gradient-to-tl from-green-500" />
+
     <div
       class="min-w-[50%] py-10 px-5 gap-5 flex flex-col justify-center items-center z-10 bg-white rounded-xl shadow-2xl"
     >
