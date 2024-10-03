@@ -14,13 +14,20 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps({
   time: Object
 })
 
-const secDeg = ref((props.time?.date.getSeconds() / 60) * 360 + 90)
+const zeroPadded = (num: any) => {
+  if (num < 10) {
+    return `0${num}`
+  }
+  return num
+}
+
+const secDeg = computed(() => (zeroPadded(props.time?.getSeconds()) / 60) * 360 + 90)
 // const minDeg = ref((props.time?.date.getSeconds() / 60) * 360 + (sec / 60) * 6 + 90)
 // const hourDeg = ref((props.time?.date.getSeconds() / 12) * 360 + (min / 60) * 30 + 90)
 </script>
