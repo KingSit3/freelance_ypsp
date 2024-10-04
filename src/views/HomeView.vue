@@ -1,13 +1,16 @@
 <template>
   <main
-    class="min-h-screen w-full flex flex-col justify-center items-center relative p-20"
+    class="min-h-screen w-full flex flex-col justify-center items-center relative p-5 lg:p-20 space-y-5"
     style="
       background-image: url('/background.jpeg');
       background-repeat: no-repeat;
       background-size: cover;
+      font-family: Nosifer;
     "
   >
-    <img src="/logo.webp" alt="Logo" class="w-40" />
+    <div class="bg-white/50 rounded-xl shadow-2xl w-full lg:w-1/4 flex justify-center">
+      <img src="/logo.webp" alt="Logo" class="w-40" />
+    </div>
     <div
       class="min-w-[50%] py-10 px-5 gap-5 flex flex-col justify-center items-center z-10 bg-white rounded-xl shadow-2xl"
     >
@@ -23,12 +26,13 @@
       <!-- Time -->
       <div class="relative flex flex-col gap-5 w-full">
         <!-- Minutes & Hours -->
-        <div class="flex justify-around w-full z-10">
+        <div class="flex flex-col lg:flex-row justify-around items-center w-full z-10 gap-5">
           <div class="flex flex-col items-center w-1/2">
             <p class="font-semibold text-lg">Menit</p>
             <p class="font-extrabold text-3xl">{{ time?.minutes }}</p>
           </div>
-          <div class="h-20 w-0.5 bg-black/20" />
+          <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
+          <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
           <div class="flex flex-col items-center w-1/2">
             <p class="font-semibold text-lg">Jam</p>
             <p class="font-extrabold text-3xl">{{ time?.hours }}</p>
@@ -38,17 +42,19 @@
         <div class="w-full h-0.5 bg-black/20" />
 
         <!-- Weeks, Months & Years -->
-        <div class="flex justify-around w-full z-10">
+        <div class="flex flex-col lg:flex-row justify-around items-center w-full z-10 gap-5">
           <div class="flex flex-col items-center w-1/3">
             <p class="font-semibold text-lg">Minggu</p>
             <p class="font-extrabold text-3xl">{{ time?.weeks }}</p>
           </div>
-          <div class="h-20 w-0.5 bg-black/20" />
+          <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
+          <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
           <div class="flex flex-col items-center w-1/3">
             <p class="font-semibold text-lg">Bulan</p>
             <p class="font-extrabold text-3xl">{{ time?.months }}</p>
           </div>
-          <div class="h-20 w-0.5 bg-black/20" />
+          <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
+          <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
           <div class="flex flex-col items-center w-1/3">
             <p class="font-semibold text-lg">Tahun</p>
             <p class="font-extrabold text-3xl">{{ time?.years }}</p>
@@ -57,9 +63,14 @@
         <div class="w-full h-0.5 bg-black/20" />
       </div>
 
-      <p class="font-semibold text-center">Penjajahan dan Agresi sejak 7 Oktober 2023</p>
+      <p class="font-semibold text-xl text-center" style="font-family: Carter One">
+        Penjajahan dan Agresi sejak 7 Oktober 2023
+      </p>
+      <button class="border-2 border-black/20 p-3 px-5 rounded-lg hover:opacity-50 duration-300">
+        Konten Media
+      </button>
       <div class="flex flex-col gap-2 justify-center items-center">
-        <p class="font-semibold">Kontak & Sosial media</p>
+        <p class="font-semibold text-center">Kontak & Sosial media</p>
         <div class="flex gap-10">
           <a href="" class="lg:hover:opacity-50 duration-300">
             <img src="/telegram-icon.svg" alt="Telegram Icon" />
