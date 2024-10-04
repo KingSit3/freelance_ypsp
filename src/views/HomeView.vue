@@ -1,34 +1,35 @@
 <template>
   <main
-    class="min-h-screen w-full flex justify-center items-center relative p-20"
+    class="min-h-screen w-full flex flex-col justify-center items-center relative p-20"
     style="
       background-image: url('/background.jpeg');
       background-repeat: no-repeat;
       background-size: cover;
     "
   >
-    <div class="absolute top-0 w-full h-full bg-gradient-to-tl from-green-500" />
-
+    <img src="/logo.webp" alt="Logo" class="w-40" />
     <div
       class="min-w-[50%] py-10 px-5 gap-5 flex flex-col justify-center items-center z-10 bg-white rounded-xl shadow-2xl"
     >
       <div class="relative">
-        <img src="/logo.webp" alt="Logo" class="w-40" />
         <div class="rotate-180">
           <ClockComponent :time="time?.date" />
         </div>
         <img src="/blood.svg" alt="Blood" class="w-40 absolute bottom-6 left-7 opacity-95" />
       </div>
 
+      <div class="w-full h-0.5 bg-black/20" />
+
       <!-- Time -->
       <div class="relative flex flex-col gap-5 w-full">
         <!-- Minutes & Hours -->
         <div class="flex justify-around w-full z-10">
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center w-1/2">
             <p class="font-semibold text-lg">Menit</p>
             <p class="font-extrabold text-3xl">{{ time?.minutes }}</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="h-20 w-0.5 bg-black/20" />
+          <div class="flex flex-col items-center w-1/2">
             <p class="font-semibold text-lg">Jam</p>
             <p class="font-extrabold text-3xl">{{ time?.hours }}</p>
           </div>
@@ -38,19 +39,22 @@
 
         <!-- Weeks, Months & Years -->
         <div class="flex justify-around w-full z-10">
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center w-1/3">
             <p class="font-semibold text-lg">Minggu</p>
             <p class="font-extrabold text-3xl">{{ time?.weeks }}</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="h-20 w-0.5 bg-black/20" />
+          <div class="flex flex-col items-center w-1/3">
             <p class="font-semibold text-lg">Bulan</p>
             <p class="font-extrabold text-3xl">{{ time?.months }}</p>
           </div>
-          <div class="flex flex-col items-center">
+          <div class="h-20 w-0.5 bg-black/20" />
+          <div class="flex flex-col items-center w-1/3">
             <p class="font-semibold text-lg">Tahun</p>
             <p class="font-extrabold text-3xl">{{ time?.years }}</p>
           </div>
         </div>
+        <div class="w-full h-0.5 bg-black/20" />
       </div>
 
       <p class="font-semibold text-center">Penjajahan dan Agresi sejak 7 Oktober 2023</p>
