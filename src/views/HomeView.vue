@@ -27,13 +27,13 @@
       <div class="relative flex flex-col gap-5 w-full">
         <!-- Minutes & Hours -->
         <div class="flex flex-col lg:flex-row justify-around items-center w-full z-10 gap-5">
-          <div class="flex flex-col items-center w-1/2">
+          <div class="flex flex-col items-center text-red-700 w-1/2">
             <p class="font-semibold text-lg">Menit</p>
             <p class="font-extrabold text-3xl">{{ time?.minutes }}</p>
           </div>
           <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
           <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
-          <div class="flex flex-col items-center w-1/2">
+          <div class="flex flex-col items-center text-red-700 w-1/2">
             <p class="font-semibold text-lg">Jam</p>
             <p class="font-extrabold text-3xl">{{ time?.hours }}</p>
           </div>
@@ -43,19 +43,19 @@
 
         <!-- Weeks, Months & Years -->
         <div class="flex flex-col lg:flex-row justify-around items-center w-full z-10 gap-5">
-          <div class="flex flex-col items-center w-1/3">
+          <div class="flex flex-col items-center text-red-700 w-1/3">
             <p class="font-semibold text-lg">Minggu</p>
             <p class="font-extrabold text-3xl">{{ time?.weeks }}</p>
           </div>
           <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
           <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
-          <div class="flex flex-col items-center w-1/3">
+          <div class="flex flex-col items-center text-red-700 w-1/3">
             <p class="font-semibold text-lg">Bulan</p>
             <p class="font-extrabold text-3xl">{{ time?.months }}</p>
           </div>
           <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
           <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
-          <div class="flex flex-col items-center w-1/3">
+          <div class="flex flex-col items-center text-red-700 w-1/3">
             <p class="font-semibold text-lg">Tahun</p>
             <p class="font-extrabold text-3xl">{{ time?.years }}</p>
           </div>
