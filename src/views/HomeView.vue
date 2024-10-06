@@ -37,6 +37,12 @@
             <p class="font-semibold text-lg">Jam</p>
             <p class="font-extrabold text-3xl">{{ time?.hours }}</p>
           </div>
+          <div class="h-20 hidden lg:flex w-0.5 bg-black/20" />
+          <div class="h-0.5 flex lg:hidden w-full bg-black/20" />
+          <div class="flex flex-col items-center text-red-700 w-1/2">
+            <p class="font-semibold text-lg">Hari</p>
+            <p class="font-extrabold text-3xl">{{ time?.days }}</p>
+          </div>
         </div>
 
         <div class="w-full h-0.5 bg-black/20" />
