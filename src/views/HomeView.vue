@@ -72,17 +72,29 @@
       <p class="font-semibold text-xl text-center" style="font-family: Carter One">
         Penjajahan dan Agresi sejak 7 Oktober 2023
       </p>
-      <button class="border-2 border-black/20 p-3 px-5 rounded-lg hover:opacity-50 duration-300">
+      <a
+        href="https://drive.google.com/drive/folders/1el_FogyxUazKgrVY6Ke8p7dZTIKIzHt2?usp=drive_link"
+        target="_blank"
+        class="border-2 border-black/20 p-3 px-5 rounded-lg hover:opacity-50 duration-300"
+      >
         Konten Media
-      </button>
+      </a>
       <div class="flex flex-col gap-2 justify-center items-center">
         <p class="font-semibold text-center">Kontak & Sosial media</p>
         <div class="flex gap-10">
-          <a href="" class="lg:hover:opacity-50 duration-300">
-            <img src="/telegram-icon.svg" alt="Telegram Icon" />
+          <a
+            href="https://www.instagram.com/matapalestina48?igsh=eW14NXN5cDkycWZj"
+            target="_blank"
+            class="lg:hover:opacity-50 duration-300"
+          >
+            <img src="/instagram-icon.svg" alt="Instagram Icon" />
           </a>
-          <a href="" class="lg:hover:opacity-50 duration-300">
-            <img src="/whatsapp-icon.svg" alt="Telegram Icon" />
+          <a
+            href="https://wa.me/+6285210116092"
+            target="_blank"
+            class="lg:hover:opacity-50 duration-300"
+          >
+            <img src="/whatsapp-icon.svg" alt="Whatsapp Icon" />
           </a>
         </div>
       </div>
