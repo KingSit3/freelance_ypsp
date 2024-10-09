@@ -125,13 +125,13 @@ const getDistantDate = () => {
 
   return {
     date: now,
-    seconds: Math.round(diff / 1000).toString(),
-    minutes: Math.round(diff / (1000 * 60)).toString(),
-    hours: Math.round(diff / (1000 * 3600)).toString(),
-    days: Math.round(diff / (1000 * 3600 * 24)).toString(),
-    weeks: Math.round(diff / (1000 * 3600 * 24 * 7)).toString(),
-    months: Math.round(diff / (1000 * 3600 * 24 * 30)).toString(), // it's not bug, it's feature!
-    years: Math.round(diff / (1000 * 3600 * 24 * 30 * 12)).toString()
+    seconds: Math.floor(diff / 1000).toString(),
+    minutes: Math.floor(diff / (1000 * 60)).toString(),
+    hours: Math.floor(diff / (1000 * 3600)).toString(),
+    days: Math.floor(diff / (1000 * 86400)).toString(),
+    weeks: Math.floor(diff / (1000 * 604800)).toString(),
+    months: Math.floor(diff / (1000 * 2629743)).toString(),
+    years: Math.floor(diff / (1000 * 31556926)).toString()
   }
 }
 
